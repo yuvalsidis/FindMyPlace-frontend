@@ -8,7 +8,7 @@ const MapContainer = () => {
     const [location, setLocation] = useState(null)
     
     return (
-        <div className={styles.map-container}>
+        <div className={styles.mapContainer}>
             <h1>map containerr</h1>
              <Map/>
         </div>
