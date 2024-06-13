@@ -19,3 +19,7 @@ header{
      z-index: 1000;
      background-color: white;
 }
+
+main{
+     padding: 0 4rem;
+}
