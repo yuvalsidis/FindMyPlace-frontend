@@ -1,5 +1,5 @@
 import Image from "next/image";
-import MapContainer from "../cmps/MapContainer";
+import MapContainer from "./cmps/MapContainer";
 
 
 export default function Home() {
