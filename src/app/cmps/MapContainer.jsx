@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import styles from '../styles/cmps/MapContainer.module.scss'
-import Map from './Map';
+import MapComponent from './Map';
 
 const MapContainer = () => {
     const [location, setLocation] = useState(null)
@@ -10,7 +10,7 @@ const MapContainer = () => {
     return (
         <div className={styles.mapContainer}>
             <h1>map containerr</h1>
-             <Map/>
+             <MapComponent/>
         </div>
     )
 

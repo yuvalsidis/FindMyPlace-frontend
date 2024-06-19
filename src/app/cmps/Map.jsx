@@ -1,16 +1,25 @@
 import React from "react";
-import { useState, useRef, useEffect } from "react";
-import styles from '../styles/cmps/Map.module.scss'
-import { apiKey } from "../../../enviroment";
-import { APIProvider } from '@vis.gl/react-google-maps';
+import { APIProvider, Map} from '@vis.gl/react-google-maps';
+import styles from '../styles/cmps/Map.module.scss';
 
-const Map = () => {
+const MapComponent = () => {
+    const API_KEY = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
+    console.log('Google Maps API Key:', API_KEY);
 
-      return (
-            <div className={styles.map}>
-                  <h1>map</h1>
-            </div>
-      )
-}
+    if (!API_KEY) {
+        return <h1>Loading</h1>;
+    }
 
-export default Map
+    return (
+      <APIProvider apiKey={API_KEY}>
+      <Map className={styles.map}
+        defaultCenter={{lat: 22.54992, lng: 0}}
+        defaultZoom={3}
+        gestureHandling={'greedy'}
+        disableDefaultUI={true}
+      />
+    </APIProvider>
+    );
+};
+
+export default MapComponent;
