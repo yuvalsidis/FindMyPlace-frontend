@@ -1,12 +1,10 @@
 import Image from "next/image";
-import MapContainer from "./cmps/MapContainer";
-
+import MainContentWrapper from "./cmps/MainContentWrapper";
 
 export default function Home() {
   return (
     <>
-      <h1>FindMyPlace</h1>
-      <MapContainer/> 
+      <MainContentWrapper/> 
     </>
   );
 }

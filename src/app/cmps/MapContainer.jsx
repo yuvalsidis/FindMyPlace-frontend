@@ -9,7 +9,6 @@ const MapContainer = () => {
     
     return (
         <div className={styles.mapContainer}>
-            <h1>map containerr</h1>
              <MapComponent/>
         </div>
     )
