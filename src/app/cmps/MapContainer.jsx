@@ -6,10 +6,10 @@ import MapComponent from './Map';
 
 const MapContainer = () => {
     const [location, setLocation] = useState(null)
-    
+
     return (
         <div className={styles.mapContainer}>
-             <MapComponent/>
+            <MapComponent />
         </div>
     )
 
