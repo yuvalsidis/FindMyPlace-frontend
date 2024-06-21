@@ -10,6 +10,9 @@ export default function Home() {
  
   useEffect(()=>{
     console.log('The Location is: ',location)
+    setTimeout(()=>{
+
+    }, 2000)
   },[location])
 
   const [isLocationModalOpen, setIsLocationModalOpen] = useState(true)

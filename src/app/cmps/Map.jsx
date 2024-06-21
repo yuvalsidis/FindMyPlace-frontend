@@ -9,12 +9,12 @@ const MapComponent = ({ location }) => {
   if (!API_KEY) {
     return <h1>Loading</h1>;
   }
-
+  
   return (
-    <APIProvider apiKey={API_KEY}>
+    <APIProvider apiKey={API_KEY} onLoad={() => console.log('Maps API has loaded.')}>
       <Map className={styles.map}
-        defaultCenter={location}
-        defaultZoom={5}
+        defaultCenter= {location}
+        defaultZoom={10}
         gestureHandling={'greedy'}
         disableDefaultUI={true}
         id="main-map"
