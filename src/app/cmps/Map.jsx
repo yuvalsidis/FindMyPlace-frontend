@@ -2,7 +2,7 @@ import React from "react";
 import { APIProvider, Map} from '@vis.gl/react-google-maps';
 import styles from '../styles/cmps/Map.module.scss';
 
-const MapComponent = () => {
+const MapComponent = ({location}) => {
     const API_KEY = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
 
     if (!API_KEY) {
