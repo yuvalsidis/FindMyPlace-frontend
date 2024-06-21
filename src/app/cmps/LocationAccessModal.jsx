@@ -2,17 +2,7 @@
 import { useState } from 'react';
 import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle } from '@mui/material';
 
-const LocationAccessModal = ({ setLocation }) => {
-    const [isModalOpen, setIsModalOpen] = useState(false)
-
-
-    const handleOpenModal = () => {
-        setIsModalOpen(true);
-    }
-
-    const handleCloseModal = () => {
-        setIsModalOpen(false);
-    }
+const LocationAccessModal = ({ setLocation, handleOpenModal, handleCloseModal, isLocationModalOpen }) => {
 
     const getLocation = async (onLocationSuccess) => {
         if (!navigator.geolocation) {
@@ -21,17 +11,20 @@ const LocationAccessModal = ({ setLocation }) => {
         }
 
         try {
-            const position = await navigator.geolocation.getCurrentPosition()
-            const { latitude, longitude } = position.coords
-            onLocationSuccess({ latitude, longitude })
-        } catch {
+            await navigator.geolocation.getCurrentPosition(onLocationSuccess)
+        } catch (error) {
             console.error('Error obtaining location:', error)
         }
     }
 
     const handleEnableLocation = () => {
         getLocation((locationData) => {
-            setLocation(locationData)
+            setLocation(
+                {
+                    latutide: locationData.coords.latitude,
+                    longitude: locationData.coords.longitude
+                }
+            )
             handleCloseModal()
         });
     }
@@ -39,7 +32,7 @@ const LocationAccessModal = ({ setLocation }) => {
 
 
     return (
-        <Dialog open={isModalOpen} onClose={handleCloseModal}>
+        <Dialog open={isLocationModalOpen} onClose={handleCloseModal}>
             <DialogTitle>Enable Location Services</DialogTitle>
             <DialogContent>
                 <DialogContentText>
