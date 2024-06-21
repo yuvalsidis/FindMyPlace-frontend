@@ -9,7 +9,7 @@ body {
      margin: 0;
 }
 
-header{
+header {
      width: 100%;
      position: sticky;
      justify-content: center;
@@ -17,17 +17,18 @@ header{
      top: 0;
      left: 0;
      box-shadow:
-     0 1px 2px vars.$shade-color,
-     0 2px 6px 2px rgba(60, 64, 67, 0.1);
+          0 1px 2px vars.$shade-color,
+          0 2px 6px 2px rgba(60, 64, 67, 0.1);
      z-index: 9999;
+     background-color: vars.$Primary-color;
+   
+     .title {
+          text-align: center;
+     }
 
 }
 
-main{
+main {
      padding: 0 vars.$app-sides-main-padding;
      position: relative;
-}
-
-.title{
-     text-align: center;
 }

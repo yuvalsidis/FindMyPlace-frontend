@@ -4,7 +4,6 @@ import styles from '../styles/cmps/Map.module.scss';
 
 const MapComponent = () => {
     const API_KEY = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
-    console.log('Google Maps API Key:', API_KEY);
 
     if (!API_KEY) {
         return <h1>Loading</h1>;
