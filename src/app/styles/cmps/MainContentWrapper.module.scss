@@ -1,7 +1,10 @@
+@use '../setup/variables.scss' as vars;
+
 .mainContentWrapper{
     display: grid;
     height: 100%;
     width: 100%;
     grid-template-columns: 3fr 1fr;
+    padding: 1rem 0;
 }
 
