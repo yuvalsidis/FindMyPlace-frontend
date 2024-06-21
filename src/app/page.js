@@ -5,8 +5,12 @@ import { useState, useEffect } from "react";
 import LocationAccessModal from "./cmps/LocationAccessModal";
 
 export default function Home() {
-  const [location, setLocation] = useState(null)
+  const [location, setLocation] = useState({ lat: 22.14992, lng: 0 })
   console.log('The location is:', location)
+ 
+  useEffect(()=>{
+    console.log('The Location is: ',location)
+  },[location])
 
   const [isLocationModalOpen, setIsLocationModalOpen] = useState(true)
 
