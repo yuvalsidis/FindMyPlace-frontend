@@ -1,7 +1,8 @@
 import React from "react";
-import { APIProvider, Map } from '@vis.gl/react-google-maps';
+import { APIProvider, Map} from '@vis.gl/react-google-maps';
 import styles from '../styles/cmps/Map.module.scss';
 import MarkerComponent from "./MarkerComponent";
+
 
 const MapComponent = ({ location }) => {
   const API_KEY = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
