@@ -3,7 +3,7 @@ import Ai from './Ai'
 
 const AiContainer = () =>{
     return(
-        <div className={styles.AiContainer}>
+        <div className={styles.aiContainer}>
             <Ai/>
         </div>
     )
