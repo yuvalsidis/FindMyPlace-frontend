@@ -21,8 +21,8 @@ const LocationAccessModal = ({ setLocation, handleOpenModal, handleCloseModal, i
         getLocation((locationData) => {
             setLocation(
                 {
-                    latutide: locationData.coords.latitude,
-                    longitude: locationData.coords.longitude
+                    lat: locationData.coords.latitude,
+                    lng: locationData.coords.longitude
                 }
             )
             handleCloseModal()
