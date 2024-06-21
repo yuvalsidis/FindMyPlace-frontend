@@ -17,6 +17,7 @@ const MapComponent = ({ location }) => {
         defaultZoom={5}
         gestureHandling={'greedy'}
         disableDefaultUI={true}
+        id="main-map"
       />
       {location && <MarkerComponent location={location} />}
     </APIProvider>
