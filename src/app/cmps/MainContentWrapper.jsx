@@ -6,7 +6,7 @@ import styles from "../styles/cmps/MainContentWrapper.module.scss"
 
 const MainContentWrapper = () => {
     return (
-        <div className={styles.MainContentWrapper}>
+        <div className={styles.mainContentWrapper}>
             <AiContainer />
             <MapContainer />
         </div>
