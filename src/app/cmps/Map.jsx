@@ -15,7 +15,7 @@ const MapComponent = ({ location }) => {
     <APIProvider apiKey={API_KEY} onLoad={() => console.log('Maps API has loaded.')}>
       <Map className={styles.map}
         center={location}
-        defaultZoom={10}
+        defaultZoom={15}
         gestureHandling={'greedy'}
         disableDefaultUI={true}
         id="main-map"

@@ -1,10 +1,11 @@
 @use '../setup/variables.scss' as vars;
 
 .mainContentWrapper{
-    display: grid;
-    height: 88%;
-    width: 100%;
-    grid-template-columns: 3fr 1fr;
+    display: grid;  
+    position: relative;
+    height: 90%;
+    width: 100%;  
     padding: 1rem 0;
+    top:20px
 }
 
