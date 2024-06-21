@@ -1,5 +1,5 @@
 import React from "react";
-import { APIProvider, Map} from '@vis.gl/react-google-maps';
+import { APIProvider, Map, Marker } from '@vis.gl/react-google-maps';
 import styles from '../styles/cmps/Map.module.scss';
 
 const MapComponent = ({location}) => {
@@ -8,12 +8,12 @@ const MapComponent = ({location}) => {
     if (!API_KEY) {
         return <h1>Loading</h1>;
     }
-
+    
     return (
       <APIProvider apiKey={API_KEY}>
       <Map className={styles.map}
-        defaultCenter={{lat: 22.54992, lng: 0}}
-        defaultZoom={3}
+        defaultCenter={!location?{lat: 22.14992, lng: 0} : {lat: location.latitude, lng: location.longitude}}
+        defaultZoom={5}
         gestureHandling={'greedy'}
         disableDefaultUI={true}
       />
