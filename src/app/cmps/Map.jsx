@@ -1,5 +1,5 @@
 import React from "react";
-import { APIProvider, Map} from '@vis.gl/react-google-maps';
+import { APIProvider, Map } from '@vis.gl/react-google-maps';
 import styles from '../styles/cmps/Map.module.scss';
 import MarkerComponent from "./MarkerComponent";
 
@@ -11,7 +11,7 @@ const MapComponent = ({ location }) => {
   if (!API_KEY) {
     return <h1>Loading</h1>;
   }
-  
+
   return (
     <APIProvider apiKey={API_KEY} onLoad={() => console.log('Maps API has loaded.')}>
       <Map className={styles.map}
@@ -21,8 +21,10 @@ const MapComponent = ({ location }) => {
         disableDefaultUI={true}
         id="main-map"
         mapId={MAP_ID}
-      />
-      {location && <MarkerComponent location={location} />}
+      >
+        {location && <MarkerComponent location={location} />}
+      </Map>
+
     </APIProvider>
   );
 };
