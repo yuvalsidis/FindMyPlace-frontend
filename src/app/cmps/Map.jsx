@@ -19,6 +19,7 @@ const MapComponent = ({ location }) => {
         gestureHandling={'greedy'}
         disableDefaultUI={true}
         id="main-map"
+        mapId={}
       />
       {location && <MarkerComponent location={location} />}
     </APIProvider>
