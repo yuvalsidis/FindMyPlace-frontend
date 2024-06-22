@@ -1,9 +1,9 @@
-import { Marker} from "@vis.gl/react-google-maps"
+import { Marker, AdvancedMarker} from "@vis.gl/react-google-maps"
 
 const MarkerComponent = ({ location }) => {
 
     return (
-        <Marker position={{ lat: location.lat, lng: location.lng }}></Marker>
+        <AdvancedMarker position={{ lat: location.lat, lng: location.lng }}></AdvancedMarker>
         
     )
 }
