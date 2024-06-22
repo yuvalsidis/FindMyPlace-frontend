@@ -6,6 +6,7 @@ import MarkerComponent from "./MarkerComponent";
 
 const MapComponent = ({ location }) => {
   const API_KEY = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
+  const MAP_ID = process.env.MAIN_MAP_ID
 
   if (!API_KEY) {
     return <h1>Loading</h1>;
@@ -19,7 +20,7 @@ const MapComponent = ({ location }) => {
         gestureHandling={'greedy'}
         disableDefaultUI={true}
         id="main-map"
-        mapId={}
+        mapId={MAP_ID}
       />
       {location && <MarkerComponent location={location} />}
     </APIProvider>
